@@ -3,9 +3,13 @@ public class DistanceTripETC {
 
 	public static void main(String[] args) {
 		
+		
+		//Exercise 1 Princess Luna and Celestia are going on a tour of the kingdom 
 		double lunaCelestiaTrip = roadTrip(10.0);
 		System.out.println("Luna and Celestia's trip is this long:  " + lunaCelestiaTrip);
 		
+		//Exercise 2  Test out your program by writing a main method that calls the distance method for each of the following pairs of cities.  
+		//Your main method should output the value returned by the distance method. 
 		double baltimoreManehattanDistance = distance(29, 16, 34, 8);
 		System.out.println("Distance from Baltimore to Manehatten is:  " + baltimoreManehattanDistance);
 		
@@ -15,6 +19,9 @@ public class DistanceTripETC {
 		double badlandsPonyvilleDistance = distance(25,24, 16, 14);
 		System.out.println("Distance from Badlands Ponyville is:  " + badlandsPonyvilleDistance);
 		
+		//Exercise 3  Write a program that helps Princess Luna plan a 3-stop tour of Equestria.
+		//choose three destinations in Equestria  output the distance between the three.
+		
 		double locationOneX = 4;
 		double locationOneY = 5;
 		double locationTwoX = 7;
@@ -23,17 +30,25 @@ public class DistanceTripETC {
 		double locationThreeY =12;
 		
 		
-		totalTripOneTwoThreeOne(locationOneX, locationOneY, locationTwoX, locationTwoY, locationThreeX, locationThreeY);
+		displayTotalTripOneTwoThreeOne(locationOneX, locationOneY, locationTwoX, locationTwoY, locationThreeX, locationThreeY);
+		
+		// Exercise 4 Write a method called totalTrip that accepts parameters for 3
+		// locations (each containing coordinates) and returns the total distance
+		// traveled by visiting all 3 locations and returning to the starting location.
+		// You should use the distance methods you wrote in Exercise 2 and you can
+		// choose any 3 locations in Equestria.
 
 	}
 	
-	private static void totalTripOneTwoThreeOne(double locationOneX, double locationOneY, double locationTwoX,
+	private static void displayTotalTripOneTwoThreeOne(double locationOneX, double locationOneY, double locationTwoX,
 			double locationTwoY, double locationThreeX, double locationThreeY) {
 		//Calculate and return distance from one to two as double distanceOneTwo
+		double distanceOneTwo = distance(locationOneX, locationOneY, locationTwoX, locationTwoY);
+		System.out.println("Distance from location one to two is: " + distanceOneTwo);
 		
 		//Calculate and return distance from two to three as double distanceTwoThree
-		
-		//Calculate and return distance from three to one as double distance ThreeOne
+		double distanceTwoThree = distance(locationTwoX, locationTwoY, locationThreeX, locationThreeY);
+		System.out.println("Dsitance from location two to three is:  " + distanceTwoThree);
 		
 		
 		
